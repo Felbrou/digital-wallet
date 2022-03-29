@@ -52,3 +52,5 @@ group :test do
 end
 
 gem 'bcrypt'
+
+gem 'sassc-rails'
