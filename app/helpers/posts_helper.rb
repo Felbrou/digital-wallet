@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 # :nodoc:
-module HomeHelper
+module PostsHelper
 end
