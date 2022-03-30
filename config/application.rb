@@ -9,7 +9,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module DigitalWallet
-  class Application < Rails::Application
+  class Application < Rails::Application # :nodoc:
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
@@ -20,5 +20,6 @@ module DigitalWallet
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.generators.test_framework :rspec
   end
 end
