@@ -27,10 +27,12 @@ gem 'bcrypt'
 gem 'bootsnap', require: false
 gem 'rubocop', require: false
 gem 'sassc-rails'
+gem 'shoulda-matchers'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'shoulda-matchers'
 end
 
 group :development do
