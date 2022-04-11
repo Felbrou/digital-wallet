@@ -27,7 +27,6 @@ gem 'bcrypt'
 gem 'bootsnap', require: false
 gem 'rubocop', require: false
 gem 'sassc-rails'
-gem 'shoulda-matchers'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
