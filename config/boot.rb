@@ -7,7 +7,7 @@ require 'bootsnap/setup' # Speed up boot time by caching expensive operations.
 
 if ENV['RAILS_ENV'] == 'test'
 	require 'simplecov'
-	SImpleCov.start 'rails'
+	SimpleCov.start 'rails'
 	puts "required simplecov"
 end
 
