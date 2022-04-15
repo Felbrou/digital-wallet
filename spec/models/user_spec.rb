@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # frozen_string_literal: trueuse
 
 require 'rails_helper'
@@ -13,3 +12,4 @@ RSpec.describe User do
     end
   end
 end
+
