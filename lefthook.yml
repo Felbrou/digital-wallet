@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: false
+  commands:
+    rubocop:
+      tags: backend style
+      glob: "*.rb"
+      exclude: "application.rb|routes.rb"
+      run: bundle exec rubocop {staged_files}
+

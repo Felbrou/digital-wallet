@@ -1,16 +1,115 @@
-# The behavior of RuboCop can be controlled via the .rubocop.yml
-# configuration file. It makes it possible to enable/disable
-# certain cops (checks) and to alter their behavior if they accept
-# any parameters. The file can be placed either in your home
-# directory or in some project directory.
-#
-# RuboCop will start looking for the configuration file in the directory
-# where the inspected file is and continue its way up to the root directory.
-#
-# See https://docs.rubocop.org/rubocop/configuration
+# https://github.com/rubocop-hq/rubocop/blob/master/config/default.yml
+require:
+  - rubocop-performance
+  - rubocop-rails
+
 AllCops:
   TargetRubyVersion: 3.0.3
-
-Lint/Syntax:
+  NewCops: disable
   Exclude:
-    bin/bundle
+    - "db/**/*"
+    - "Rakefile"
+    - "*.gemspec"
+    - "version.rb"
+
+Rails:
+  Enabled: true
+
+Layout/DotPosition:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 130
+  Exclude:
+    - "spec/**/**/*"
+    - "services/*/spec/**/**/*"
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Layout/ParameterAlignment:
+  Enabled: false
+
+Lint/Void:
+  Exclude:
+    - "spec/**/**/*"
+    - "services/*/spec/**/**/*"
+
+Metrics/AbcSize:
+  Exclude:
+    - "spec/**/**/*"
+    - "services/*/spec/**/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/**/*"
+    - "services/*/spec/**/**/*"
+
+Metrics/MethodLength:
+  Max: 30
+  Exclude:
+    - "spec/**/**/*"
+    - "services/*/spec/**/**/*"
+
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - "spec/**/**/*"
+    - "services/*/spec/**/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+# This cop is designed to help upgrade to after Ruby 3.0. It will add the comment # frozen_string_literal: true to the top of files to enable frozen string literals. Frozen string literals may be default after Ruby 3.0. The comment will be added below a shebang and encoding comment. The frozen string literal comment is only valid in Ruby 2.3+.
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/GlobalVars:
+  Exclude:
+    - "spec/**/**/*"
+    - "services/*/spec/**/**/*"
+
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
+  Enabled: false
+
+Style/MethodDefParentheses:
+  Enabled: false
+
+Style/Semicolon:
+  Exclude:
+    - "spec/**/**/*"
+    - "services/*/spec/**/**/*"
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
