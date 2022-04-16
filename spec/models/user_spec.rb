@@ -6,6 +6,7 @@ RSpec.describe User do  # method rspec for User class models/concerns/user.rb
   describe 'validations' do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:password) }
+    it { is_expected.to validate_presence_of(:email) }
   end
 end
   
